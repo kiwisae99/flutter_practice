@@ -18,6 +18,7 @@ class DrawingCanvas extends HookWidget {
     final ValueNotifier<int> polygonSides;
     final ValueNotifier<bool> filled;
 
+
   DrawingCanvas({super.key, required this.height, required this.width, required this.selectedColor, required this.strokeSize, required this.eraserSize, required this.drawingMode, required this.sideBarController, required this.currentSketch, required this.allSketches, required this.polygonSides, required this.filled, required this.backgroundImage});
 
     @override
@@ -119,6 +120,10 @@ class SketchPainter extends CustomPainter {
 
   @override
   bool shouldRepaint(covariant SketchPainter oldDelegate) {
-   return oldDelegate.sketches != sketches;
+  //  if(oldDelegate.sketches != sketches) {
+  //   return true;
+  //  }
+  //  return false;
+  return true;
   }
 }
